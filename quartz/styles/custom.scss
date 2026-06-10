@@ -1,3 +1,10 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+.page[data-frame="default"]>#quartz-body {
+
+  /* Use a standard CSS breakpoint instead of the Quartz variable */
+  @media all and (min-width: 1200px) {
+    /* Left column (default), Center body (expanding), Right column (0px) */
+    grid-template-columns: 280px minmax(0, 1fr) 100px;
+  }
+}
